@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>第一篇题解——青铜莲花池</title>
+    <link href="/2023/02/12/%E7%AC%AC%E4%B8%80%E7%AF%87%E9%A2%98%E8%A7%A3%E2%80%94%E2%80%94%E9%9D%92%E9%93%9C%E8%8E%B2%E8%8A%B1%E6%B1%A0/"/>
+    <url>/2023/02/12/%E7%AC%AC%E4%B8%80%E7%AF%87%E9%A2%98%E8%A7%A3%E2%80%94%E2%80%94%E9%9D%92%E9%93%9C%E8%8E%B2%E8%8A%B1%E6%B1%A0/</url>
+    
+    <content type="html"><![CDATA[<p><del>应该是</del>一道经典的bfs广搜题</p><h1 id="青铜莲花池——题目"><a href="#青铜莲花池——题目" class="headerlink" title="青铜莲花池——题目"></a>青铜莲花池——题目</h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>$Farmer John$ 建造了一个美丽的池塘，用于让他的牛们审美和锻炼。这个长方形的池子被分割成了$ M $行和$ N $列$( 1 \leq M \leq 30 ; 1 \le N \le 30 )$ 正方形格子的 。某些格子上有惊人的坚固的莲花，还有一些岩石，其余的只是美丽，纯净，湛蓝的水。</p><p>贝茜正在练习芭蕾舞，她从一个莲花跳跃到另一个莲花，当前位于一个莲花。她希望在莲花上一个一个的跳，目标是另一个给定莲花。她能跳既不入水，也不到一个岩石上。</p><p>令门外汉惊讶的是，贝茜的每次的跳跃像国际象棋中的骑士一样：横向移动$M1 (1 \leq M1 \leq 30 )$，然后纵向移动$M2 (1 \leq M2 \leq 30 ;M1 \neq M2 )$ ，或纵向移动$M1$，然后横向移动$M2$。贝茜有时可能会有多达8个选择的跳跃。</p><p>给定池塘的布局和贝茜的跳跃格式，请确定贝茜从从她的出发位置，到最终目的地，最小的跳跃次数，贝茜在给出测试数据一定可以跳到目的地。</p><h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><p>第 1 行: 四个用空格隔开的整数: $M$, $N$, $M1$, $M2$。<br>第 2..$M + 1$ 行: 第 $i + 1$ 行 有 $N$ 个整数，表示该位置的状态: $0$ 为水; $1$ 为莲花; $2$ 为岩石; $3$ 为贝茜开始的位置; $4$ 为贝茜要去的目标位置。</p><h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h2><p>第 1 行: 一个整数，从起始点到要去的位置，贝茜最小的跳跃次数。</p><h2 id="样例-1"><a href="#样例-1" class="headerlink" title="样例 #1"></a>样例 #1</h2><h3 id="样例输入-1"><a href="#样例输入-1" class="headerlink" title="样例输入 #1"></a>样例输入 #1</h3><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs basic"><span class="hljs-symbol">4 </span><span class="hljs-number">5</span> <span class="hljs-number">1</span> <span class="hljs-number">2</span><br><span class="hljs-symbol">1 </span><span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span><br><span class="hljs-symbol">3 </span><span class="hljs-number">0</span> <span class="hljs-number">2</span> <span class="hljs-number">0</span> <span class="hljs-number">4</span><br><span class="hljs-symbol">0 </span><span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span><br><span class="hljs-symbol">0 </span><span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span><br></code></pre></td></tr></table></figure><h3 id="样例输出-1"><a href="#样例输出-1" class="headerlink" title="样例输出 #1"></a>样例输出 #1</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">2<br></code></pre></td></tr></table></figure><h1 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h1>]]></content>
+    
+    
+    <categories>
+      
+      <category>C++</category>
+      
+      <category>bfs</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>原创</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>test</title>
     <link href="/2023/02/12/test/"/>
     <url>/2023/02/12/test/</url>

@@ -16,21 +16,22 @@
   <meta name="author" content="TomXGC">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+    <meta name="description" content="举一反三，一道bfs的题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2023/02/12/hello-world/index.html">
+<meta property="og:title" content="第一篇题解——青铜莲花池">
+<meta property="og:url" content="http://example.com/2023/02/12/%E7%AC%AC%E4%B8%80%E7%AF%87%E9%A2%98%E8%A7%A3%E2%80%94%E2%80%94%E9%9D%92%E9%93%9C%E8%8E%B2%E8%8A%B1%E6%B1%A0/index.html">
 <meta property="og:site_name" content="TomXGC">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="举一反三，一道bfs的题">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-02-12T09:33:14.073Z">
-<meta property="article:modified_time" content="2023-02-12T09:27:10.918Z">
+<meta property="article:published_time" content="2023-02-12T14:02:41.000Z">
+<meta property="article:modified_time" content="2023-02-12T15:12:41.697Z">
 <meta property="article:author" content="TomXGC">
+<meta property="article:tag" content="原创">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Hello World - TomXGC</title>
+  <title>第一篇题解——青铜莲花池 - TomXGC</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -213,7 +214,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Hello World"></span>
+            <span id="subtitle" data-typed-text="第一篇题解——青铜莲花池"></span>
           
         </div>
 
@@ -224,8 +225,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-02-12 17:33" pubdate>
-          2023年2月12日 下午
+        <time datetime="2023-02-12 22:02" pubdate>
+          2023年2月12日 晚上
         </time>
       </span>
     
@@ -236,7 +237,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          367 字
+          625 字
         
       </span>
     
@@ -247,7 +248,7 @@
         
         
         
-          4 分钟
+          6 分钟
         
       </span>
     
@@ -293,25 +294,21 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Hello World</h1>
+            <h1 style="display: none">第一篇题解——青铜莲花池</h1>
             
             
               <div class="markdown-body">
                 
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
+                <p><del>应该是</del>一道经典的bfs广搜题</p>
+<h1 id="青铜莲花池——题目"><a href="#青铜莲花池——题目" class="headerlink" title="青铜莲花池——题目"></a>青铜莲花池——题目</h1><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>$Farmer John$ 建造了一个美丽的池塘，用于让他的牛们审美和锻炼。这个长方形的池子被分割成了$ M $行和$ N $列$( 1 \leq M \leq 30 ; 1 \le N \le 30 )$ 正方形格子的 。某些格子上有惊人的坚固的莲花，还有一些岩石，其余的只是美丽，纯净，湛蓝的水。</p>
+<p>贝茜正在练习芭蕾舞，她从一个莲花跳跃到另一个莲花，当前位于一个莲花。她希望在莲花上一个一个的跳，目标是另一个给定莲花。她能跳既不入水，也不到一个岩石上。</p>
+<p>令门外汉惊讶的是，贝茜的每次的跳跃像国际象棋中的骑士一样：横向移动$M1 (1 \leq M1 \leq 30 )$，然后纵向移动$M2 (1 \leq M2 \leq 30 ;M1 \neq M2 )$ ，或纵向移动$M1$，然后横向移动$M2$。贝茜有时可能会有多达8个选择的跳跃。</p>
+<p>给定池塘的布局和贝茜的跳跃格式，请确定贝茜从从她的出发位置，到最终目的地，最小的跳跃次数，贝茜在给出测试数据一定可以跳到目的地。</p>
+<h2 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h2><p>第 1 行: 四个用空格隔开的整数: $M$, $N$, $M1$, $M2$。<br>第 2..$M + 1$ 行: 第 $i + 1$ 行 有 $N$ 个整数，表示该位置的状态: $0$ 为水; $1$ 为莲花; $2$ 为岩石; $3$ 为贝茜开始的位置; $4$ 为贝茜要去的目标位置。</p>
+<h2 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h2><p>第 1 行: 一个整数，从起始点到要去的位置，贝茜最小的跳跃次数。</p>
+<h2 id="样例-1"><a href="#样例-1" class="headerlink" title="样例 #1"></a>样例 #1</h2><h3 id="样例输入-1"><a href="#样例输入-1" class="headerlink" title="样例输入 #1"></a>样例输入 #1</h3><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs basic"><span class="hljs-symbol">4 </span><span class="hljs-number">5</span> <span class="hljs-number">1</span> <span class="hljs-number">2</span><br><span class="hljs-symbol">1 </span><span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span><br><span class="hljs-symbol">3 </span><span class="hljs-number">0</span> <span class="hljs-number">2</span> <span class="hljs-number">0</span> <span class="hljs-number">4</span><br><span class="hljs-symbol">0 </span><span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span><br><span class="hljs-symbol">0 </span><span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">1</span> <span class="hljs-number">0</span><br></code></pre></td></tr></table></figure>
+<h3 id="样例输出-1"><a href="#样例输出-1" class="headerlink" title="样例输出 #1"></a>样例输出 #1</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">2<br></code></pre></td></tr></table></figure>
+<h1 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h1>
                 
               </div>
             
@@ -319,6 +316,41 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/C/" class="category-chain-item">C++</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/C/bfs/" class="category-chain-item">bfs</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E5%8E%9F%E5%88%9B/">#原创</a>
+      
+    </div>
   
 </div>
 
@@ -328,8 +360,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Hello World</div>
-      <div>http://example.com/2023/02/12/hello-world/</div>
+      <div>第一篇题解——青铜莲花池</div>
+      <div>http://example.com/2023/02/12/第一篇题解——青铜莲花池/</div>
     </div>
     <div class="license-meta">
       
@@ -373,15 +405,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/02/12/test/" title="test">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">test</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2023/02/12/test/" title="test">
+                        <span class="hidden-mobile">test</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
